@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul, li{
+            list-style: none;
+        }
+        ul li{float: left;}
+        /* a 테그를 붙이면 파란글씨에 밑줄이 생김 */
+        ul li a{
+            color: black;
+            /* 밑줄 제거 */
+            text-decoration: none;
+        }
+        ul li:hover{
+            background-color: yellow;
+            text-decoration: underline;
+        }
+        ul li a:active{background-color: orange;}
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</body>
+</html>
