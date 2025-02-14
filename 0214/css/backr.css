@@ -1,0 +1,43 @@
+*{margin: 0;padding: 0;}
+.back{
+    width: 100%;
+    height: 100vh;
+}
+.back1{
+    background-color: aliceblue;
+    background-image: url(../images\ 2/b1.jpg);
+    /* background-image:url(../images\ 2/dog1.jpg);
+    background-repeat: repeat-y;
+    배경 이미지는 기본으로 반복 no reapeat(반복안함)
+    repeat-x x축으로만 반복
+    repeat-y y축으로만 반복 */
+    /* background-size: cover; */
+}
+.back2{
+    background-color: rgb(91, 212, 87);
+    background-image: url(../images\ 2/b2.jpg);
+}
+.back3{
+    background-color: rgb(42, 101, 153);
+    background-image: url(../images\ 2/b3.jpg);
+    background-attachment: fixed;
+}
+.back4{
+    background-color: rgb(196, 29, 132);
+    background-image: url(../images\ 2/b4.jpg);
+}
+.back5{
+    background-color: rgb(138, 172, 61);
+    background-image: url(../images\ 2/b5.jpg);
+}
+
+.back6{
+    background-image: url(../images\ 2/dog1.jpg);
+    background-repeat: no-repeat;
+    /* 배경위치 */
+    background-position: 50% 50%;
+    background-color: cadetblue;
+}
+.back7{
+    background: cadetblue url(../images\ 2/dog1.jpg) no-repeat 50% 50%;
+}
