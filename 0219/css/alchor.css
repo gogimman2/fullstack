@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0;}
+.bigbox{
+    position: absolute;
+    border: 1px solid #fff;
+    width: 1100px;
+    height: 900px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+.mysty{
+    position: absolute;
+    float: left;animation: slide1 3s forwards;
+}
+@keyframes slide1 {
+    
+}
+.terra{
+    position: absolute;
+    margin-left: 270px;
+}
+.bodo{
+    position: absolute;
+    margin-left: 540px;
+}
+.kelly{
+    position: absolute;
+    margin-left: 810px;
+}
+.sg{
+    position: absolute;
+    margin-top: 270px;
+}
+.hite{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 540px;
+}
+.gg{
+    position: absolute;
+    margin-top: 540px;
+}
+.tvcf{
+    position: absolute;
+    margin-top: 540px;
+    margin-left: 270px;
+}
+.digital{
+    position: absolute;
+    margin-top: 540px;
+    margin-left: 810px;
+}
+

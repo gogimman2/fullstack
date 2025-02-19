@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+<style>
+.box{
+    width: 200px;
+    height:200px;
+}
+.box1{
+    background-color: blueviolet;
+}
+.box2{
+    background-color:aqua;
+}
+.box3{
+    background-color: yellowgreen;
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+/* 
+position: relative
+1. 자리값이 없다
+2. left, top 이동가능
+3. 아래.box4에 영향을 미치지 않는다
+4. 향후 absolute에 부모가 되기도 한다
+5. 기준위치가 워낼 있던곳에서 계산
+ */
+.box4{
+    background-color: tomato;
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

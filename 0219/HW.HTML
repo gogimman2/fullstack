@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #333;
+            transform: translate(-50%, -50%);
+        }
+        .cc1{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .cc2{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-left: 320px;
+            margin-top: -80px;
+        }
+        .cc3{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-top: 240px;
+        }
+        .cc4{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-top: -80px;
+            margin-left: 320px;
+        }
+        .line1{
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 320px;
+            height: 3px;
+            background-color: #000;
+            animation: line1 3s forwards;
+        }
+        @keyframes line1 {
+            0%{width: 0;}
+            100%{width: 320px;}
+        }
+        .line2{
+            position: absolute;
+            top: 40px;
+            left: 360px;
+            width: 3px;
+            height: 0px;
+            background-color: #000;
+            animation: line2 3s  3s forwards;
+            opacity: 0;
+        }
+        @keyframes line2 {
+            0%{
+                height: 0;
+                opacity: 0;
+            }
+            100%{
+                height: 320px;
+                opacity: 1;
+            }
+        }
+        .line3{
+            position: absolute;
+            top: 360px;
+            right: 40px;
+            width: 0px;
+            height: 3px;
+            background-color: #000;
+            animation: line3 3s  6s forwards;
+            opacity: 0;
+        }
+        @keyframes line3 {
+            0%{
+                width: 0;
+                opacity: 0;
+            }
+            100%{
+                width: 320px;
+                opacity: 1;
+            }
+        }
+        .line4{
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            width: 3px;
+            height: 0px;
+            background-color: #000;
+            animation: line4 3s  9s forwards;
+            opacity: 0;
+        }
+        @keyframes line4 {
+            0%{
+                height: 0;
+                opacity: 0;
+            }
+            100%{
+                height: 320px;
+                opacity: 1;
+            }
+        }
+        .img1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: img1 3s 12s forwards;
+        }
+        @keyframes img1 {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cc1"></div>
+        <div class="cc2"></div>
+        <div class="cc3"></div>
+        <div class="cc4"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <img src="ani/img/sunset.jpg" alt=" "class="img1">
+    </div>
+</body>
+</html>
