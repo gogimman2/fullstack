@@ -72,3 +72,9 @@ header>nav>ul>li>ul>li>a{
     display: block;
     padding: 10px;
 }
+.shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+}
