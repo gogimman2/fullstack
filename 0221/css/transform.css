@@ -1,0 +1,14 @@
+*{margin: 0;padding: 0;}
+.bigbox{
+    width: 1000px;
+    margin: 100px auto 0;
+    /* 마진 위100 좌우 auto 아래 0 */
+    border: 5px solid tan;
+    /* height: 2580px; */
+    overflow: hidden;
+    padding: 20px 0;
+}
+.bigbox h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
