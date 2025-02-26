@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
-/* reset */
 *{margin: 0;padding: 0;}
 ol, ul{list-style: none;}
 a{
@@ -91,12 +90,8 @@ article:nth-child(12){
 }
 /* 레이아웃 변경할떄 보여주는 효과 */
 /* 브라우저 크기가 변경될때 각 컨텐츠박스(article)가 점점 커지는 애니메이션 */
-header, nav, section{
-    transition: all 0.6s;
-}
-article{
-    animation: scale1 1s;
-}
+header, nav, section{transition: all 0.6s;}
+article{animation: scale1 1s;}
 @keyframes scale1{
     0%{transform: scale(0);}
     100%{transform: scale(1);}
@@ -128,15 +123,9 @@ header h1{
     text-align: left;
     line-height: 1.8;
 }
-#gnb a i{
-    margin-right: 13px;
-}
-#gnb a{
-    transition: all 0.6s;
-}
-#gnb a:hover{
-    color: skyblue;
-}
+#gnb a i{margin-right: 13px;}
+#gnb a{transition: all 0.6s;}
+#gnb a:hover{color: skyblue;}
 /* sns 아이콘 스타일 */
 .sunSet{
     width: 90px;
@@ -147,9 +136,7 @@ header h1{
     margin-right: -50px;  /* 우측을 기준으로 중앙정렬 */
 }
 /* 전체 넓이가 90이므로 두줄로 정렬 */
-.sunSet a{
-    float: left;
-}
+.sunSet a{float: left;}
 nav a{
     position: absolute;
     top: 5px;
@@ -250,9 +237,7 @@ article .txt strong{
 }
 /* 텍스트1박스 호버효과(transitinal) */
 /* 텍스트박스, 화살표 */
-article .txt, article .txt i{
-    transition: all 1s;
-}
+article .txt, article .txt i{transition: all 1s;}
 /* 텍스트 제목 */
 article .txt strong{transition: all 0.7s;}
 article:hover .txt{
