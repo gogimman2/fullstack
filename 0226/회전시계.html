@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #clock{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+            border: 1px solid #333;
+        }
+        #clock img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="data">00</span>일
+        <span id="nday">0</span>
+        <span id="hour">00</span>시
+        <span id="minutes">00</span>분
+        <span id="seconds">00</span>초
+    </h1>
+    <div id="clock">
+        <img src="images/clock.png" alt="시계" id="clock1">
+        <img src="images/h.png" alt="시" id="hour1">
+        <img src="images/m.png" alt="분" id="minutes1">
+        <img src="images/s.png" alt="초" id="seconds1">
+    </div>
+    <script>
+        autoTime();
+        setInterval(autoTime, 1000);
+        
+        function autoTime(){
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var data = today.getDate();
+            var day = today.getDay(); 
+            var yoil;
+
+            switch (day){
+                case 0:
+                    yoil = "일요일"
+                    break;
+                case 1:
+                    yoil = "월요일"
+                    break;
+                case 2:
+                    yoil = "화요일"
+                    break;
+                case 3:
+                    yoil = "수요일"
+                    break;
+                case 4:
+                    yoil = "목요일"
+                    break;
+                case 5:
+                    yoil = "금요일"
+                    break;
+                case 6:
+                    yoil = "토요일"
+                    break;
+                default:
+                    yoil = "잘못입력"
+                    break;
+            }
+
+            var hour = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+
+            document.getElementById('year').innerHTML = year;
+            document.getElementById('month').innerHTML = month;
+            document.getElementById('data').innerHTML = data;
+            document.getElementById('nday').innerHTML = yoil;
+            document.getElementById('hour').innerHTML = hour;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+        
+            // id선택자를 선택하는 방법
+            var si = document.getElementById('hour1');
+            var bun = document.getElementById('minutes1');
+            var cho = document.getElementById('seconds1');
+
+            if(hour > 12){
+                hour = hour - 12;
+            }
+
+            var dh = (hour * 30) + (minutes / 2);
+            var dm = minutes * 6;
+            var ds = seconds * 6; // 초당 6도씩 가야만 60초일때 360(1회전)
+
+            si.style.transform = "rotate( "+dh+"deg)";
+            bun.style.transform = "rotate("+dm+"deg)";
+            cho.style.transform = "rotate("+ds+"deg)";
+        }
+    </script>
+</body>
+</html>

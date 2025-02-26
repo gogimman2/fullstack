@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        // alert(today);
+        var year = today.getFullYear();
+        // alert(year);
+        var month = today.getMonth() + 1;
+        // alert(month);
+        var data = today.getDate();
+        // alert(data);
+        var day = today.getDay(); 
+        var yoil;
+        switch (day){
+            case 0:
+                yoil += "일요일"
+                break;
+            case 1:
+                yoil += "월요일"
+                break;
+            case 2:
+                yoil += "화요일"
+                break;
+            case 3:
+                yoil += "수요일"
+                break;
+            case 4:
+                yoil += "목요일"
+                break;
+            case 5:
+                yoil += "금요일"
+                break;
+            case 6:
+                yoil += "토요일"
+                break;
+            default:
+                yoil = "잘못입력"
+                break;
+        }
+        // alert(yoil);
+        var hour = today.getHours();
+        // alert(hour);
+        var minutes = today.getMinutes();
+        // alert(minutes);
+        var seconds = today.getSeconds();
+        // alert(seconds);
+        // document.write(year + "년 " + month + "월 " + data + "일 " + yoil + " " + hour + "시 " + minutes + "분 " + seconds+ "초 ");
+        document.write('${year}년 ${month}월 ${data}일 ${yoil} ${hour}시 ${minutes}분 ${seconds}초');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // if (day == 0){
+        //     var result = '일요일'
+        //     alert(result);
+        // }
+        // else if (day == 1){
+        //     var result = '월요일'
+        //     alert(result);
+        // }
+        // else if (day == 2){
+        //     var result = '화요일'
+        //     alert(result);
+        // }
+        // else if (day == 3){
+        //     var result = '수요일'
+        //     alert(result);
+        // }
+        // else if (day == 4){
+        //     var result = '목요일'
+        //     alert(result);
+        // }
+        // else if (day == 5){
+        //     var result = '금요일'
+        //     alert(result);
+        // }
+        // else if (day == 6){
+        //     var result = '토요일'
+        //     alert(result);
+        // }
+        // var today1 = new Date(2025, 2, 26);
+        // alert(today1);
+    </script>
+</body>
+</html>
