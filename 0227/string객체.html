@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // charAt()
+        // index번호 5번에 있는 c한문자를 추출
+        var str = "Javascript";
+        console.log(str.charAt(5));
+        var str = "Javascript"
+        console.log(str.indexOf('v'));
+        // a포함되 있으면 1을 반환
+        console.log(str.indexOf('k'));
+        // k가 포함되 있지 않으면 -1을 변환
+        // lastIndexOf();
+        // var str = 'Javascript'
+        // console.log(str.lastIndexOf('a'));
+
+        var str = 'Javascript';
+        console.log(str.includes("script"))
+
+        var str = 'http://icoxpublish.com';
+        console.log(str.substring(0, 4));  // 0번부터 4번까지
+        console.log(str.substring(7));  // 7번부터 끝까지
+
+        // substr()
+        var str = 'http://icoxpublish.com';
+        console.log(str.substring(7, 4));  // 7번부터 4글자
+
+        // split() - split다음에 있는 문자를 기준으로 배열로 나눔
+        var str = "Javascript_Jquery";
+        var division = str.split('_');  // _바를 기준으로 배열로 나눔
+        console.log(division[0] + ', ' + division[1]);
+
+        // replace();
+        var str = "m_out.gif";
+        console.log(str.replace('out', 'over'));
+
+        var str1 = 'nav';
+        var str2 = '_bg';
+        console.log(str1.concat(str2));
+
+        // 공백제거
+        var str = "    removeblank    ";
+        console.log(str.trim());
+        
+        // toLowerCase(), toUpperCase()
+        var str = 'LowerCase';
+        console.log(str.toLowerCase());
+        var str = 'UpperCase';
+        console.log(str.toUpperCase());
+    </script>
+</body>
+</html>
