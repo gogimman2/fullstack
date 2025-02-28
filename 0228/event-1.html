@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/function.css">
+</head>
+<body>
+    <ul>
+        <li class="on"><a href="#" onclick="return changeBg('green')">green</a></li>
+        <li><a href="#" onclick="return changeBg('orange')">orange</a></li>
+        <li><a href="#" onclick="return changeBg('purple')">purple</a></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+        // green, orange, purple 을 전달할 매게변수 color
+        function changeBg(color){
+            const list = document.querySelectorAll('li');
+
+            list.forEach(item => item.classList.remove('on'));
+
+            // li는 여러개 있으므로 querySelectAll
+            event.target.parentElement.classList.add('on');
+            // a가 모두 세개 중 클릭한 a 의 부모 li
+
+            // var result = document.getElementById('result');
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+            return false;  // a 링크금지
+        }
+    </script>
+</body>
+</html>
