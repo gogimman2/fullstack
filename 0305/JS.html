@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        ul li{list-style: none;}
+        .b{display: flex;}
+        .b li{
+            padding: 5px;
+            border: 1px solid #333;
+        }
+        .b li.o{
+            background-color: red;
+            color: #fff;
+        }
+        .s{
+            width: 250px;
+            height: 150px;
+            border: 1px solid #333;
+        }
+        .s li{display: none;}
+        .s li.a{display: block;}
+    </style>
+    <script>
+        $(function(){
+            $(".b li").click(function(){
+                var i = $(this).index();
+                $(".b li").removeClass('o');
+                $(".b li").eq(i).addClass('o');
+
+                $(".s li").removeClass('a');
+                $(".s li").eq(i).addClass('a');
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul class="b">
+        <li class="o">메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+    <ul class="s">
+        <li class="a">내용물1</li>
+        <li>내용물2</li>
+        <li>내용물3</li>
+        <li>내용물4</li>
+        <li>내용물5</li>
+        <li>내용물6</li>
+    </ul>
+</body>
+</html>

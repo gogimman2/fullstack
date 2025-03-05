@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = true;
+        var b = false;
+        var c= 10 > 5;
+        var d = Boolean(null);
+        // Boolean() 데이터가 입력되면 true 입력되지 않으면 false
+        document.write(a, "<br>");
+        document.write(b, "<br>");
+        document.write(c, "<br>");
+        document.write(d, "<br>");
+
+        var num = 100;
+        var str = "자바스크립트";
+        var num = 10;  // 변수의 첫글자로는 $, _, 영문자
+        // 예약어나 숫자는 올 수 없음
+        var s;
+        document.write(s, "<br>");  // 변수는 초기값을 주어야 한다
+        
+        document.write(typeof num, "<br>");  // number - 숫자
+        document.write(typeof str, "<br>");  // string - 문자
+        
+        var t1 = "학교종이";
+        var t2 = "땡땡땡";
+        var result = t1 + t2;
+        document.write(result, "<br>");  // 문자 + 문자, 숫자 + 문자 는 붙어서 출력된다.
+
+        var str1 = "<table border = '1'>";
+        str1 += "<tr>";
+        str1 += "<td>1</td><td>2</td><td>3</td>";
+        str1 += "</tr>";
+        str1 += "</table>";
+        console.log(str1);
+        document.write(str1);
+    </script>
+</body>
+</html>
