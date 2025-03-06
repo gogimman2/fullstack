@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        ul li{list-style: none;}
+        .up{display: flex;}
+        .up li{
+            padding: 5px;
+            border: 1px solid #333;
+        }
+        .up li.on{
+            background-color: red;
+            color: #fff;
+        }
+        .down{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #333;
+        }
+        .down li{display: none;}
+        .down li.active{display: block;}
+    </style>
+    <script>
+        $(function(){
+            $(".up li").click(function(){
+                var i = (this).index();
+                $(".up li").removeClass('on');
+                $(".up li").eq(i).addClass('on');
+
+                $(".down li").removeClass('active');
+                $(".down li").eq(i).addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="up">
+        <li class="on">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <ul class="down">
+        <li class="active">menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+        <li>menu-4</li>
+    </ul>
+</body>
+</html>
