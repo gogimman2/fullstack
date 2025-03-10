@@ -9,29 +9,25 @@
     <script>
         $(function () {
            $('.ham').click(function(){
-              
                 if($(this).hasClass('on') === false){
                     $('nav').addClass('active')
                     $(this).addClass('on');
-                    //三 을 X 로 변경
                 }else{
                     $('nav').removeClass('active');
                     $(this).removeClass('on');
                 }
             });
             $('.sub').hide();
-            $('#navi> li >a').click(function(){
-               var aaa =  $(this).next().css('display');
-               if(aaa ==='none'){
+            $('#navi > li > a').click(function(){
+               var a =  $(this).next().css('display');
+               if(a ==='none'){
                 $('.sub').slideUp();
                 $(this).next('.sub').slideDown();
                }else{
                 $(this).next('.sub').slideUp();
                } 
-
                 return false;
             });
-            
         });
     </script>
     <style>
@@ -43,9 +39,6 @@
         ul {
             list-style: none;
         }
-
-
-
         /* 가로스크롤바 없애기 - 스마트폰 제작시 꼭필요 */
         header {
             width: 100%;
