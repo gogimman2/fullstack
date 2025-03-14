@@ -158,7 +158,7 @@ nav ul:hover + .shadow{
     line-height: 80px;
     z-index: 50;
 }
-#mright h2{
+#mright h2 a{
     color: white;
     z-index: 51;
 }
