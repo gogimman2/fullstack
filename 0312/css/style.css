@@ -22,6 +22,14 @@ header h5{
     right: 500px;
     color: gray;
 }
+#line{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    top: 190px;
+    z-index: 20;
+}
 header{
     width:100%;
     height:420px;
@@ -56,20 +64,6 @@ header>nav>ul>li>a{
     font-weight: bold;
     position: relative;
 }
-header>nav>ul>li>a:after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height:3px;
-    background-color: green;
-    left:0;
-    bottom:0;
-    transform: scale(0,1);
-}
-header>nav>ul>li>a:hover::after{
-    transform: scale(999999,1);
-    background-color: gray;
-}
 header nav ul ul a{
     font-size: 13px;
     display: inline-block;
@@ -77,9 +71,6 @@ header nav ul ul a{
     line-height: 40px;
     position: relative;
     color:gray;
-}
-header>nav>ul>ul>a:hover{
-    color:green;
 }
 header nav ul ul a::after{
     content: '';
@@ -91,9 +82,8 @@ header nav ul ul a::after{
     bottom:0;
     transform: scale(0,1);
 }
-header>nav>ul>li>ul>li>a:hover::after{
-    transform: scale(1,1);
-    background-color: green;
+header>nav>ul>li>ul>li>a:hover{
+    text-decoration: underline green;
 }
 header nav ul li ul{
     height:0;
@@ -104,23 +94,25 @@ header nav ul:hover li ul{
     height:250px;
     background-color: #fff;
 }
-header nav .sub_shadow{
-    position: absolute;
-    width: 100%;
-    height:0px;
-    left:0;
-    top:0;
-    background-color: #fff;
-    transition: all 0.35s;
+.shadow{
+	position:absolute;
+	left:0;
+	top:px;
+	width:100%;
+	height:0;
+	background-color:#fff;
+	border-top:1px solid #e5e5e5;
+	transition:all 0.3s;
+	z-index:2;
 }
-header>nav>ul:hover + .sub_shadow{
-    height: 300px;
+nav ul:hover + .shadow{
+	height:250px;
 }
 #banner{
     width: 2200px;
     height: 440px;
 }
-#img-slide{
+#slide{
     top: -230px;
     width: 1920px;
     height: 440px;
@@ -128,11 +120,484 @@ header>nav>ul:hover + .sub_shadow{
     position: relative;
     overflow: hidden;
 }
-#img-slide ul{
+#slide ul{
     width: 7000px;
     height: 440px;
 }
-#img-slide ul li{
+#slide ul li{
     width: 1920px;
     float: left;
+}
+#section2{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 585px;
+}
+#mleft{
+    position: relative;
+    top: 20px;
+    left: 950px;
+    width: 300px;
+    height: 80px;
+    background-color: rgb(247, 189, 81);
+    border-radius: 30px 0 0 0;
+    text-align: center;
+    line-height: 80px;
+    z-index: 50;
+}
+#mright{
+    position: relative;
+    top: -60px;
+    left: 1250px;
+    width: 300px;
+    height: 80px;
+    background-color: green;
+    border-radius: 0px 0 30px 0px;
+    text-align: center;
+    line-height: 80px;
+    z-index: 50;
+}
+#mright h2{
+    color: white;
+    z-index: 51;
+}
+#section3{
+    position: absolute;
+    top: 635px;
+    width: 100%;
+    height: 660px;
+    background-color: white;
+}
+#menu1{
+    position: absolute;
+    top: 140px;
+    left: 400px;
+    font-weight: bold;
+    z-index: 80;
+}
+#radius1{
+    position: absolute;
+    top: 135px;
+    left: 380px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(247, 189, 81);
+    border-radius: 30px 30px 0px 30px;
+    z-index: 70;
+}
+#menuss p{
+    font-size: 17px;
+}
+#menuss p a{
+    color: gray;
+    font-weight: bold;
+}
+#c1{
+    position: absolute;
+    top: 150px;
+    left: 1130px;
+    z-index: 10;
+}
+#mid1{
+    position: absolute;
+    top: 150px;
+    left: 1200px;
+    z-index: 10;
+}
+#c2{
+    position: absolute;
+    top: 150px;
+    left: 1225px;
+    z-index: 10;
+}
+#mid2{
+    position: absolute;
+    top: 150px;
+    left: 1355px;
+    z-index: 10;
+}
+#c3{
+    position: absolute;
+    top: 150px;
+    left: 1380px;
+    z-index: 10;
+}
+#mid3{
+    position: absolute;
+    top: 150px;
+    left: 1470px;
+    z-index: 10;
+}
+#c4{
+    position: absolute;
+    top: 150px;
+    left: 1500px;
+    z-index: 10;
+}
+#c1 a:hover{color: green;}
+#c2 a:hover{color: green;}
+#c3 a:hover{color: green;}
+#c4 a:hover{color: green;}
+#eggwrap{
+    text-align: center;
+}
+#egg{
+    position: absolute;
+    top: 220px;
+    left: 400px;
+    width: 280px;
+    height: 200px;
+}
+#text1{
+    position: absolute;
+    top: 420px;
+    left: 420px;
+}
+#bmtrap{
+    text-align: center;
+}
+#bmt{
+    position: absolute;
+    top: 220px;
+    left: 720px;
+    width: 280px;
+    height: 200px;
+}
+#text2{
+    position: absolute;
+    top: 420px;
+    left: 720px;
+}
+#bltrap{
+    text-align: center;
+}
+#blt{
+    position: absolute;
+    top: 220px;
+    left: 1030px;
+    width: 280px;
+    height: 200px;
+}
+#text3{
+    position: absolute;
+    top: 420px;
+    left: 1070px;
+}
+#hamrap{
+    text-align: center;
+}
+#ham{
+    position: absolute;
+    top: 220px;
+    left: 1330px;
+    width: 280px;
+    height: 200px;
+}
+#text4{
+    position: absolute;
+    top: 420px;
+    left: 1390px;
+}
+#egg:hover{
+    width: 330px;
+    height: 250px;
+}
+#bmt:hover{
+    width: 330px;
+    height: 250px;
+}
+#blt:hover{
+    width: 330px;
+    height: 250px;
+}
+#ham:hover{
+    width: 330px;
+    height: 250px;
+}
+#section4{
+    position: absolute;
+    top: 1295px;
+    width: 100%;
+    height: 790px;
+    background-color: gray;
+    background: url(../img/back1.png) no-repeat 0 0;
+}
+#vj{
+    display: block;
+    position: absolute;
+    top: 85px;
+    left: 350px;
+}#fun{
+    position: absolute;
+    top: 130px;
+    left: 390px;
+    z-index: 99;
+}
+#fun a{
+    font-weight: bold;
+    color: white;
+}
+#round1{
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    width: 90px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid white;
+}
+#tool{
+    position: absolute;
+    top: 305px;
+    left: 415px;
+    z-index: 99;
+}
+#tool a{
+    color: #fff;
+}
+#grow{
+    position: absolute;
+    top: 135px;
+    left: 1165px;
+    z-index: 99;
+}
+#grow a{
+    color: white;
+    font-weight: bold;
+}
+#round2{
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 1170px;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid white;
+}
+#history{
+    position: absolute;
+    top: 308px;
+    left: 1187px;
+    z-index: 99;
+}
+#history a{
+    color: white;
+}
+#dh{
+    display: block;
+    position: absolute;
+    top: 85px;
+    left: 750px;
+}
+#bt{
+    width: 870px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    left: 350px;
+    top: 410px;
+    border-radius: 30px 0px 30px 0px;
+}
+#radius2{
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(247, 189, 81);
+    border-radius: 30px 30px 0px 30px;
+}
+#whats{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+}
+#whats{
+    font-weight: bold;
+}
+#bwhat{
+    position: absolute;
+    font-size: 17px;
+    top: 140px;
+    left: 85px;
+    text-align: center;
+}
+#subs{
+    position: absolute;
+    font-size: 17px;
+    top: 70px;
+    left: 350px;
+    text-align: center;
+}
+#subs2{
+    position: absolute;
+    font-size: 17px;
+    top: 120px;
+    left: 350px;
+    text-align: center;
+}
+#subs3{
+    position: absolute;
+    font-size: 17px;
+    top: 170px;
+    left: 350px;
+    text-align: center;
+}
+#mores{
+    position: absolute;
+    top: 250px;
+    left: 350px;
+    font-size: 17px;
+}
+#mores a{
+    color: rgb(168, 168, 168);
+}
+#subs:hover a{
+    color: green;
+    text-decoration: underline green;
+    font-size: 17px;
+}
+#subs2:hover a{
+    color: green;
+    text-decoration: underline green;
+    font-size: 17px;
+}
+#subs3:hover a{
+    color: green;
+    text-decoration: underline green;
+    font-size: 17px;
+}
+#tear{
+    position: absolute;
+    top: 410px;
+    left: 1250px;
+    border-radius: 0px 30px 0px 30px;
+    width: 270px;
+    height: 300px;
+    background-color: #000;
+    background: url(../img/drama5.jpg) no-repeat 0 0;
+}
+#section5{
+    position: absolute;
+    top: 2095px;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+#section5 img{
+    position: absolute;
+    padding: 40px 900px;
+}
+#cmm{
+    position: relative;
+    left: 450px;
+}
+#cos{
+    position: absolute;
+    left: 1430px;
+    top: 45px;
+}
+#cos-1{
+    position: absolute;
+    left: 1430px;
+    top: 75px;
+}
+#open{
+    position: relative;
+    left: -450px;
+}
+#fran{
+    position: absolute;
+    left: 530px;
+    top: 45px;
+}
+#fran-1{
+    position: absolute;
+    left: 530px;
+    top: 75px;
+}
+#map{
+    position: relative;
+    left: -150px;
+}
+#zisa{
+    position: absolute;
+    left: 830px;
+    top: 45px;
+}
+#zisa-1{
+    position: absolute;
+    left: 830px;
+    top: 75px;
+}
+#you{
+    position: relative;
+    left: 150px;
+}
+#ad{
+    position: absolute;
+    left: 1130px;
+    top: 45px;
+}
+#ad-1{
+    position: absolute;
+    left: 1130px;
+    top: 75px;
+}
+h3{
+    color: #000;
+    font-weight: bold;
+}
+p{
+    color: gray;
+    font-size: 13px;
+}
+footer{
+    position: absolute;
+    top: 2245px;
+    width: 100%;
+    height: 160px;
+    background-color: #333;
+}
+#lineff{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(77, 77, 77);
+    top: 60px;
+    z-index: 20; 
+}
+footer p{
+    font-size: 15px;
+    z-index: 50;
+}
+#f1{
+    position: absolute;
+    top: 22px;
+    left: 350px;
+}
+#big{
+    position: absolute;
+    top: 22px;
+    left: 450px;
+    font-weight: bold;
+    color: #e5e5e5;
+}
+#f2{
+    position: absolute;
+    top: 22px;
+    left: 600px;
+}
+#f3{
+    position: absolute;
+    top: 22px;
+    left: 700px;
+}
+#bottom{
+    position: absolute;
+    top: 85px;
+    left: 350px;
 }
