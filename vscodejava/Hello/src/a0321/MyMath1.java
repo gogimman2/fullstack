@@ -3,20 +3,20 @@ package a0321;
 public class MyMath1 {
     public static void main(String[] args) {
         
-       //int b =  MyMath.add(5, 6);
-       // 2. MyMath 객체 생성
-       MyMath mm = new MyMath();
-     //순서3. MyMath 객체사용
-     int m1 = mm.add(5,6); 
-     int m2 = mm.subtract(9, 5);
-     int m3 = mm.multiplay(4, 5);
-     double m4 = mm.divide(8, 2);
-     int m5 = mm.max(15, 6);
-     System.out.println("m1 += " + m1);   
-     System.out.println("m2 -= " + m2);   
-     System.out.println("m3 *= " + m3);   
-     System.out.println("m4 += " + m4);   
-     System.out.println("m5 > = " + m5);
+        //int b =  MyMath.add(5, 6);
+        // 2. MyMath 객체 생성
+        MyMath mm = new MyMath();
+        //순서3. MyMath 객체사용
+        int m1 = mm.add(5,6); 
+        int m2 = mm.subtract(9, 5);
+        int m3 = mm.multiplay(4, 5);
+        double m4 = mm.divide(8, 2);
+        int m5 = mm.max(15, 6);
+        System.out.println("m1 += " + m1);   
+        System.out.println("m2 -= " + m2);   
+        System.out.println("m3 *= " + m3);   
+        System.out.println("m4 += " + m4);   
+        System.out.println("m5 >= " + m5);
 
     }
 }

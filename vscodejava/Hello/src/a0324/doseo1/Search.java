@@ -53,7 +53,45 @@ public class Search {
                     sc.nextLine(); //개행문자 초기화
                     manager.addLibrary(newTitle,newAuthor,newLocation,newIsbn);
                     System.out.println("도서추가 완료");
-                    break;       
+                    break;
+                case 5:
+                    System.out.println("삭제 시작");
+                    System.out.println("삭제하려는 도서 이름을 적어 주세요");
+                    String dname = sc.nextLine();
+                    if (dname.equals("")) {
+                        System.out.println("삭제 하려는 도서 이름을 다시입력\n 이름?>>");
+                        dname = sc.nextLine();
+                    }
+                    manager.delLibrary(dname);
+                    System.out.println("삭제 끝");
+                    break;
+                case 6:
+                    System.out.println("수정 시작");
+                    System.out.println("수정하려는 도서 이름을 적어 주세요");
+                    String uname = sc.nextLine();
+                    if (uname.equals("")) {
+                        System.out.println("수정 하려는 도서 이름을 다시입력\n 이름?>>");
+                        uname = sc.nextLine();
+                    }
+                    manager.updateLibrary(uname);
+                    System.out.println("수정 끝");
+                    break;
+                case 7:
+                    System.out.println("조회시작 \n 도서 이름 입력");
+                    String sname = sc.nextLine();
+                    if (sname.equals("")) {
+                        System.out.println("조회 하려는 도서 이름을 다시입력\n 이름?>>");
+                        sname = sc.nextLine();
+                    }
+                    manager.showLibrary(sname);
+                    System.out.println("조회끝");
+                    break;
+                case 8:
+                    System.out.println("종료");
+                    flag = false;
+                    sc.close();  // scanner 종료
+                    System.exit(0);
+                    break;
                 default:
                     break;
             }

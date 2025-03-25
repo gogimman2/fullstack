@@ -28,3 +28,4 @@ public class Main2 {
           System.out.println("영어: " + student2.getEng());
           System.out.println("평균: " + student2.getAverage());
 }
+}
