@@ -16,7 +16,7 @@ public class GradeManager {
             System.out.println("3. 성적 수정");
             System.out.println("4. 성적 삭제");
             System.out.println("5. 종료");
-            System.out.print("선택: ");
+            System.out.print("선택 : ");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); //개행문자처리
@@ -83,7 +83,7 @@ public class GradeManager {
             System.out.println("등록된 성적이 없습니다.");
         }
         else{
-            System.out.println("\n-------성적목록-------");
+            System.out.println("\n------- 성적목록 -------");
             for(Student s : students){
                 s.display();  // 직접만든 출력 메서드를 사용
                 // System.out.println(s.toString());  // toString을 이용
