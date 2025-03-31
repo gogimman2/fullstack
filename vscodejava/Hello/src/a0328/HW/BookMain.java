@@ -42,6 +42,16 @@ public class BookMain {
                 case 5:
                     b2.ball();
                     break;
+                case 6:
+                    try {
+                        b2.dataSave();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 7:
+                    b2.dataLoad();
+                    break;
                 case 0:
                     System.out.println("종료합니다.");
                     scanner.close();

@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Book2 {
     private ArrayList<Book> slist;
     Scanner scanner = new Scanner(System.in);
+    BookClass file =new BookClass("book","book_b");
 
     public Book2(){
         slist = new ArrayList<Book>();
@@ -44,7 +45,6 @@ public class Book2 {
             System.out.println("찾는 ISBN가 없습니다.");
         }
         else{
-            String ISBN = slist.get(index).getISBN();
             slist.remove(index);
             System.out.println("도서 정보를 삭제했습니다.");
         }
@@ -68,7 +68,7 @@ public class Book2 {
 		System.out.println("<도서 검색>");
         int index = searchIndex();
         if (index == -1) {
-            System.out.println("찾는 도서다 없습니다.");
+            System.out.println("찾는 도서가 없습니다.");
         }
         else{
             Book b = select(index);
@@ -110,4 +110,16 @@ public class Book2 {
             System.out.println(slist.get(i).toString());
         }
     }
+
+    public void dataSave() throws Exception {
+        file.create();
+     }
+ 
+     public void dataLoad() {
+         try{
+             file.read();
+         }catch(Exception e){
+             System.out.println("읽을파일이 없습니다.");
+         }
+     }
 }
