@@ -31,7 +31,6 @@ public class CoffeeService {
     Thread t = new Thread(); // 아직 안배움 - 지연클래스
     Scanner sc = new Scanner(System.in);
 
-
     public void start() {
         System.out.println("\n 어서오세요 더조은커피숍입니다.");
         customer = new Customer(orderNum); // 주문번호 , 잔액(카드)
@@ -52,9 +51,9 @@ public class CoffeeService {
         int s = 1;
         StringBuffer message = new StringBuffer();
         message.append("\n\n ")
-                    .append("+----------------------------------------------------+\n ")
-                    .append("|                                                    | \n ")
-                    .append("|           " + customer.getOrderName() + " 고객님 주문하신 음료 나왔습니다         | " + "\n");
+                .append("+----------------------------------------------------+\n ")
+                .append("|                                                    | \n ")
+                .append("|           " + customer.getOrderName() + " 고객님 주문하신 음료 나왔습니다         | " + "\n");
             System.out.print(message);
             for (Map.Entry<String, Integer> order : customer.getCoffeeOrder().entrySet()) {
                 System.out.printf(" | [%d] %-20s : %2d잔  %7s |\n", s, order.getKey(), order.getValue(), "");
@@ -88,12 +87,14 @@ public class CoffeeService {
                         int addCount = orderList.get(coff).intValue() + orderCount;
                         // 주문리스트의 수량을 불러서 현재 수량과 더한다.
                         orderList.replace(coffeeName, addCount); // 변경한다.
-                    }else{
+                    }
+                    else{
                         orderList.put(coffeeName, orderCount);
                         break;
                     }
                 }
-            }else{
+            }
+            else{
                 orderList.put(coffeeName, orderCount); // 커피 이름, 주문수량
                 
             }
@@ -103,15 +104,13 @@ public class CoffeeService {
             customer.setCoffeeOrder(orderList);
             break end;
 
-
-        }catch(Exception e){
+        }
+        catch(Exception e){
             System.out.println("잘못된 선택입니다.");
             continue;
         }
-
-        }
     }
-
+}
 
     private void addOrder() {
         reOrder = false;
@@ -122,7 +121,8 @@ public class CoffeeService {
             coffee.getMenu();
             reOrder = true;
             order();
-        }else if(yesOrNo.equals("아니오") || yesOrNo.equalsIgnoreCase("n")){
+        }
+        else if(yesOrNo.equals("아니오") || yesOrNo.equalsIgnoreCase("n")){
             return;
         }
     }
@@ -159,13 +159,7 @@ public class CoffeeService {
         .append(" ============ 총 결제 금액은 " + f.format(totalMoney) + "입니다 ========== \n");
         System.out.println(message);
         payment(totalMoney);
-
-
     }
-
-
-
-
 
     private void payment(int totalMoney) {
         System.out.println("결제를 도와 드리겠습니다. 카드를 넣어주세요.");
@@ -174,12 +168,14 @@ public class CoffeeService {
         try {
             t.sleep(2500); // 2.5초 실행
             System.out.println("결제 중입니다......");
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
         if(payResult < 0){
             System.out.println("잔액이 부족합니다. 확인 후 다시 주문해주세요.");
-        }else{
+        }
+        else{
             customer.setMoney(payResult);
             System.out.println("결제가 완료 되었습니다.");
             System.out.println("이용해주셔서 감사합니다.");
@@ -188,6 +184,4 @@ public class CoffeeService {
         //  payment(int totalMoney)는 고객의 잔액에서 총 주문 금액을 차감하고 결제
         // 완료하는 기능담당
     }
-
-
 }
