@@ -148,7 +148,7 @@ public class FlightManager {
         for(;;){
             if(index !=-1){
                 System.out.println("결제 비밀번호");
-                String pw = sc.next();
+                String pw = sc.next();  // 비밀번호 키보드 입력
                 System.out.println();
                 if(passengers.get(index).getPw().equals(pw)){
                     System.out.println("비밀번호가 일치합니다.");
@@ -189,6 +189,17 @@ public class FlightManager {
         }
         return index;
     }
-
-
+    public void ticketSave() {
+        int index = search("티켓조회");
+        checkPassword(index);
+        fc.ticketSaveFile(reservationMap, passengers.get(index).getName());
+    }
+    public static ArrayList<Flight> getFlights() {
+        return flights;
+    }
+    // 항공편목록(flights)을 외부에서 접근 하는 getter메서드
+    public static Map<String, Flight> getReservationMap() {
+        return reservationMap;
+    }
+    // 예약정보(reservationMap) 을 외부에서 접근 하는 getter메서드
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 public class Customer {
     private int orderNum;
     private int money;  // 고객의 잔액
-    private Map<String, Integer> bookOrder;  // 주문한 책과 수량
+    private Map<String, Integer> foodOrder;  // 주문한 책과 수량
 
     public Customer(int orderNum) {
         this.orderNum = orderNum;
@@ -13,11 +13,11 @@ public class Customer {
     }
 
     public Map<String, Integer> getBookOrder() {
-        return bookOrder;
+        return foodOrder;
     }
 
     public void setBookOrder(Map<String, Integer> bookOrder) {
-        this.bookOrder = bookOrder;
+        this.foodOrder = bookOrder;
     }
 
     public int getOrderNum() {
@@ -38,5 +38,10 @@ public class Customer {
 
     public String getOrderName() {
         return "고객 " + orderNum;
+    }
+
+    public Map<String getFoodOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFoodOrder'");
     }
 }
